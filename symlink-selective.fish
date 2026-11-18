@@ -1,9 +1,9 @@
 #!/usr/bin/env fish
-# Symlink files in ~/omarchy-config/config-selective into ~/.config.
+# Symlink files in ~/config-omarchy/config-selective into ~/.config.
 # The tree matches ~/.config. Stow creates missing directories and links
 # only files. An existing file is replaced by that symlink.
 
-set -l stow_dir $HOME/omarchy-config
+set -l stow_dir $HOME/config-omarchy
 set -l package config-selective
 set -l source_root $stow_dir/$package
 set -l target $HOME/.config

@@ -17,3 +17,7 @@ super space then default terminal
 
 ## Omarchy script for monitor issue:
 added ~/.config/omarchy/bin/wake-external-display 
+
+## Omarchy add asterists for terminal passwords
+sudo env EDITOR=nvim visudo
+add a line with `Defaults pwfeedback`

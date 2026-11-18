@@ -60,15 +60,11 @@
 hl.config({
   input = {
     touchpad = {
-      -- Use natural (inverse) scrolling.
       natural_scroll = true,
-
       -- Use two-finger clicks for right-click instead of lower-right corner.
       clickfinger_behavior = true,
-
-      -- Enable the touchpad while typing.
       disable_while_typing = false,
+      tap_to_click = false,
     },
   },
 })
-

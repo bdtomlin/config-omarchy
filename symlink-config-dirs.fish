@@ -1,8 +1,8 @@
 #!/usr/bin/env fish
-# Symlink every directory in ~/omarchy-config/config-dirs into ~/.config.
+# Symlink every directory in ~/config-omarchy/config-dirs into ~/.config.
 # An existing directory of the same name is replaced by that symlink.
 
-set -l stow_dir $HOME/omarchy-config
+set -l stow_dir $HOME/config-omarchy
 set -l package config-dirs
 set -l source_root $stow_dir/$package
 set -l target $HOME/.config

@@ -1,0 +1,88 @@
+# name: Kanagawa Dragon
+# url: https://github.com/rebelot/kanagawa.nvim
+# Palette from rebelot/kanagawa.nvim (dragon variant)
+
+[dark]
+# preferred_background: 181616
+
+# Syntax
+fish_color_normal c5c9c5
+fish_color_command 8ba4b0
+fish_color_keyword a292a3
+fish_color_quote 8a9a7b
+fish_color_redirection b6927b
+fish_color_end 949fb5
+fish_color_error c4746e --bold
+fish_color_param c8c093
+fish_color_comment 737c73 --italics
+fish_color_operator c4b28a
+fish_color_escape e46876
+fish_color_autosuggestion 625e5a
+fish_color_valid_path --underline
+fish_color_option 8ea4a2
+fish_color_selection --background=393836
+fish_color_search_match --background=2d4f67
+fish_color_history_current --bold
+fish_color_cancel -r
+
+# Prompt
+fish_color_cwd 87a987
+fish_color_cwd_root c4746e
+fish_color_user b6927b
+fish_color_host 8ba4b0
+fish_color_host_remote c4b28a
+fish_color_status c4746e
+
+# Pager
+fish_pager_color_progress 737c73
+fish_pager_color_background --background=181616
+fish_pager_color_prefix c4b28a
+fish_pager_color_completion c5c9c5
+fish_pager_color_description 737c73
+fish_pager_color_selected_background --background=393836
+fish_pager_color_selected_prefix c4b28a
+fish_pager_color_selected_completion c5c9c5
+fish_pager_color_selected_description a6a69c
+fish_pager_color_secondary_background --background=1d1c19
+fish_pager_color_secondary_prefix c4b28a
+fish_pager_color_secondary_completion c5c9c5
+fish_pager_color_secondary_description 737c73
+
+[unknown]
+fish_color_normal c5c9c5
+fish_color_command 8ba4b0
+fish_color_keyword a292a3
+fish_color_quote 8a9a7b
+fish_color_redirection b6927b
+fish_color_end 949fb5
+fish_color_error c4746e --bold
+fish_color_param c8c093
+fish_color_comment 737c73 --italics
+fish_color_operator c4b28a
+fish_color_escape e46876
+fish_color_autosuggestion 625e5a
+fish_color_valid_path --underline
+fish_color_option 8ea4a2
+fish_color_selection --background=393836
+fish_color_search_match --background=2d4f67
+fish_color_history_current --bold
+fish_color_cancel -r
+fish_color_cwd 87a987
+fish_color_cwd_root c4746e
+fish_color_user b6927b
+fish_color_host 8ba4b0
+fish_color_host_remote c4b28a
+fish_color_status c4746e
+fish_pager_color_progress 737c73
+fish_pager_color_background --background=181616
+fish_pager_color_prefix c4b28a
+fish_pager_color_completion c5c9c5
+fish_pager_color_description 737c73
+fish_pager_color_selected_background --background=393836
+fish_pager_color_selected_prefix c4b28a
+fish_pager_color_selected_completion c5c9c5
+fish_pager_color_selected_description a6a69c
+fish_pager_color_secondary_background --background=1d1c19
+fish_pager_color_secondary_prefix c4b28a
+fish_pager_color_secondary_completion c5c9c5
+fish_pager_color_secondary_description 737c73

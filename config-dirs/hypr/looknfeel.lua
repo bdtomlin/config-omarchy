@@ -53,3 +53,19 @@
 --     column_width = 0.97,
 --   },
 -- })
+
+hl.config({
+  decoration = {
+    -- Use round window corners.
+    rounding = 4,
+  },
+  general = {
+    -- No gaps between windows or borders.
+    gaps_in = 4,
+    gaps_out = 4,
+    border_size = 2,
+
+    -- Change to niri-like side-scrolling layout.
+    layout = "scrolling",
+  },
+})

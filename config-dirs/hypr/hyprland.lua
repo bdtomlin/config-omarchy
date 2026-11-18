@@ -27,3 +27,11 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+
+o.rebind("SUPER + H", "Focus on left window", hl.dsp.focus({ direction = "l" }))
+o.rebind("SUPER + L", "Focus on right window", hl.dsp.focus({ direction = "r" }))
+o.bind("SUPER + SHIFT + L", "Cycle workspace layout", "omarchy-hyprland-workspace-layout-toggle")
+o.rebind("SUPER + J", "Focus on below window", hl.dsp.focus({ direction = "d" }))
+o.rebind("SUPER + K", "Focus on above window", hl.dsp.focus({ direction = "u" }))
+o.bind("SUPER + SHIFT + K", "Keybindings", "omarchy-menu-keybindings")
+o.bind("SUPER + SHIFT + J", "Toggle window split", hl.dsp.layout("togglesplit"))
