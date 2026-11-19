@@ -1,0 +1,2 @@
+-- Kanagawa options live in lua/kanagawa-theme.lua.
+-- plugin/omarchy-theme.lua applies them when the Omarchy colorscheme is kanagawa.

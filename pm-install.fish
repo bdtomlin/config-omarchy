@@ -9,4 +9,6 @@ sudo pacman -Sy \
   fish \
   direnv \
   rbenv \
-  ruby-build
+  ruby-build \
+  yazi \
+  zellij

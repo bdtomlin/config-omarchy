@@ -1,0 +1,83 @@
+[mgr]
+show_hidden = false
+
+[opener]
+open = [
+  { run = "gio open %s1", desc = "System default", for = "linux", orphan = true },
+]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" }
+]
+
+# play = [
+# 	{ run = 'mpv "$@"', orphan = true, for = "unix" }
+# ]
+# neovim = [
+# 	{ run = 'nvim "$@"', block = true, for = "unix" }
+# ]
+# reveal = [
+#   { run = 'nautilus -w "$@"', orphan = true, desc = "Reveal", for = "linux"}
+# ]
+# libreoffice = [
+#     { run = 'libreoffice "$@"', desc = "LibreOffice", orphan = true, for = "unix" }
+# ]
+# firefox = [
+#     { run = 'firefox "$@"', desc = "Firefox Browser", orphan = true, for = "unix" }
+# ]
+
+# [open]
+# prepend_rules = [
+#     { url = "*.csv", use = [ "neovim", "libreoffice", "reveal" ] },
+#     { url = "*.html", use = [ "neovim", "firefox", "reveal" ] },
+#     { mime = "text/*", use = [ "open", "edit", "reveal" ] },
+#     { mime = "{audio,video}/*", use = [ "open", "reveal" ] },
+#     { mime = "application/{json,ndjson,javascript}", use = [ "open", "edit", "reveal" ] },
+#     { mime = "inode/empty", use = [ "open", "edit", "reveal" ] },
+# ]
+
+[preview]
+ueberzug_scale = 1.0           # > 1 enlarges, < 1 shrinks
+ueberzug_offset = [0, 0, 0, 0] # position offset in character cells [x, y, w, h]
+
+[tasks]
+# Max dimension allowed to be decoded at all (prevents RAM spikes)
+# The default is often 10,000. Max value is 65535.
+image_bound = [10000, 10000]
+
+# [[plugin.prepend_fetchers]]
+# url   = "*"
+# run   = "git"
+# group = "git"
+#
+
+# Closer to word motions
+[[input.prepend_keymap]]
+on = "w"
+run = "forward fine"
+desc = "Forward word (fine / Vim-like)"
+
+[[input.prepend_keymap]]
+on = "b"
+run = "backward fine"
+desc = "Backward word (fine / Vim-like)"
+
+[[input.prepend_keymap]]
+on = "e"
+run = "forward fine --end-of-word"
+desc = "End of word (fine / Vim-like)"
+
+# Optional: keep uppercase for WORD motions
+[[input.prepend_keymap]]
+on = "W"
+run = "forward wide"
+desc = "Forward WORD"
+
+[[input.prepend_keymap]]
+on = "B"
+run = "backward wide"
+desc = "Backward WORD"
+
+[[input.prepend_keymap]]
+on = "E"
+run = "forward wide --end-of-word"
+desc = "End of WORD"

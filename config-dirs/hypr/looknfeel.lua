@@ -55,17 +55,26 @@
 -- })
 
 hl.config({
-  decoration = {
-    -- Use round window corners.
-    rounding = 4,
-  },
-  general = {
-    -- No gaps between windows or borders.
-    gaps_in = 4,
-    gaps_out = 4,
-    border_size = 2,
+	decoration = {
+		-- Use round window corners.
+		rounding = 4,
+	},
+	general = {
+		-- No gaps between windows or borders.
+		gaps_in = 4,
+		gaps_out = 4,
+		border_size = 2,
 
-    -- Change to niri-like side-scrolling layout.
-    layout = "scrolling",
-  },
+		-- Change to niri-like side-scrolling layout.
+		layout = "scrolling",
+	},
+	scrolling = {
+		-- column_width = 0.49,
+		-- explicit_column_widths = "0.327, 0.49, 0.653, 0.98",
+		column_width = 0.49,
+		explicit_column_widths = "0.327, 0.49, 0.653, 0.98",
+		focus_fit_method = 1,
+	},
 })
+hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
+hl.env("XCURSOR_SIZE", "24")

@@ -2,9 +2,14 @@
 config-file = ?"~/.local/state/omarchy/current/theme/ghostty.conf"
 
 # Font
-font-family = "JetBrainsMono Nerd Font"
+font-family = "AdwaitaMono Nerd Font"
 font-style = Regular
-font-size = 11
+font-size = 10
+window-inherit-font-size = false
+# font vertical spacing adjustment
+# a number is pixels and a percentage is relative to the font default
+# adjust-cell-height = 2
+adjust-cell-height = 10%
 
 # Window
 window-theme = ghostty

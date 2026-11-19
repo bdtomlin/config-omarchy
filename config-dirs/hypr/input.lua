@@ -48,7 +48,10 @@
 -- o.window("(Alacritty|kitty)", { scroll_touchpad = 1.5 })
 -- o.window("foot", { scroll_touchpad = 2.0 })
 -- o.window("com.mitchellh.ghostty", { scroll_touchpad = 0.2 })
-
+-- egui launcher: the global touchpad scroll_factor is 0.4, which is tuned
+-- Storyteller Craft apps (egui). Replaces the global touchpad scroll_factor of 0.4.
+o.window([[ai\.storyteller\..*]], { scroll_touchpad = 1.5 })
+-- for GTK and Firefox. This replaces that factor for this window only.
 -- Enable touchpad gestures for changing workspaces.
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/
 -- hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
@@ -59,6 +62,9 @@
 
 hl.config({
   input = {
+    -- 0	Click to focus, 1	Hover focuses the window (Omarchy default),
+    -- 2	Hover moves pointer focus only; a click moves keyboard focus, 3	Hover never moves keyboard focus, and a click does not either
+    follow_mouse = 2,
     touchpad = {
       natural_scroll = true,
       -- Use two-finger clicks for right-click instead of lower-right corner.
@@ -68,3 +74,9 @@ hl.config({
     },
   },
 })
+-- hl.gesture({ fingers = 3, direction = "horizontal", action = "scroll_move", scale = 1.5 })
+-- hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
+
+-- Enable touchpad gestures for moving focus (helpful on scrolling layout).
+hl.gesture({ fingers = 3, direction = "right", action = function() hl.dispatch(hl.dsp.focus({ direction = "l" })) end })
+hl.gesture({ fingers = 3, direction = "left", action = function() hl.dispatch(hl.dsp.focus({ direction = "r" })) end })
