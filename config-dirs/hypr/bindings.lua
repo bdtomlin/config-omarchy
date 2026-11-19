@@ -117,10 +117,23 @@ o.rebind("SUPER + SHIFT + F", "Half column", hl.dsp.layout("colresize 0.49"))
 
 o.bind("SUPER + E", "Yazi", { tui = "yazi", focus = true })
 o.rebind("SUPER + SHIFT + E", "File manager", { launch = "nautilus --new-window", focus = "org.gnome.Nautilus" })
-o.rebind("SUPER + SHIFT + RETURN", "Browser", { launch = "firefox", focus = "^firefox$" })
-o.rebind("SUPER + B", "Browser", { launch = "firefox", focus = "^firefox$" })
-o.rebind("SUPER + SHIFT + B", "Browser", { launch = "firefox" })
 
+-- Raise the default browser if a window exists; otherwise launch it.
+local focus_browser = [[
+desktop=$(omarchy-cmd-default-browser) || exit 1
+class=
+IFS=: read -ra dirs <<< "${XDG_DATA_HOME:-$HOME/.local/share}:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+for dir in "${dirs[@]}"; do
+  entry="$dir/applications/$desktop"
+  [ -f "$entry" ] || continue
+  class=$(sed -n 's/^StartupWMClass=//p' "$entry" | head -1)
+  break
+done
+class=${class:-${desktop%.desktop}}
+omarchy-hyprland-focus-app "^${class}$" || exec omarchy-launch-browser
+]]
+
+o.bind("SUPER + B", "Browser", focus_browser)
 -- BEGIN CHROMA SHORTCUT SETUP v1 (managed; do not edit)
 require("hypr.chroma")
 -- END CHROMA SHORTCUT SETUP
