@@ -28,11 +28,13 @@ add a line with `Defaults pwfeedback`
 
 ## Todo
 
-- [ ] add some kind of terminal mux
+- [ ] better color picker
 
 ## Favorite Omarchy Themes
 
 - Vitesse Black
+- Apexer
+- Tesla Roadster
 
 ## Favorite Fonts
 
