@@ -30,6 +30,7 @@ if status is-interactive
   set -x PATH "$HOME/.cargo/bin:$PATH"
   export PATH="$HOME/.local/bin:$PATH"
   export PATH="$HOME/.npm-global/bin:$PATH"
+  export PATH="$HOME/config-omarchy/bin:$PATH"
 # allow local ./bin
   export PATH="./bin:$PATH"
 

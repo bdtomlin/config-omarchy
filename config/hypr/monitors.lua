@@ -39,7 +39,7 @@
 -- Kept from your earlier monitors.lua, which is saved as monitors.lua.bak.1795117804.
 -- Laptop on the left, MSI on the right. The laptop's top half lines up
 -- with the bottom third of the external monitor.
-hl.monitor({ output = "eDP-1", mode = "2560x1600@165.02", position = "0x1190", scale = 1.6, transform = 0 })
+hl.monitor({ output = "eDP-1", mode = "2560x1600@165.02", position = "0x1154", scale = 1.6, transform = 0 })
 hl.monitor({ output = "DP-2", mode = "3840x2160@120.00", position = "1600x0", scale = 1.25, transform = 0 })
 
 local omarchy_gdk_scale = 1

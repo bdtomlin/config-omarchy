@@ -4,7 +4,7 @@ config-file = ?"~/.local/state/omarchy/current/theme/ghostty.conf"
 # Font
 font-family = "AdwaitaMono Nerd Font"
 font-style = Regular
-font-size = 10
+font-size = 9
 window-inherit-font-size = false
 # font vertical spacing adjustment
 # a number is pixels and a percentage is relative to the font default

@@ -117,8 +117,15 @@ o.rebind("SUPER + SHIFT + F", "Half column", hl.dsp.layout("colresize 0.49"))
 
 o.bind("SUPER + E", "Yazi", { tui = "yazi", focus = true })
 o.rebind("SUPER + SHIFT + E", "File manager", { launch = "folio --new-window", focus = "folio" })
-o.rebind("SUPER + SHIFT + Return", "Tuios", { tui = "tuios", focus = true })
-o.bind("SUPER + A", "Tuios", { tui = "btop", focus = true })
+o.rebind("SUPER + N", "Notes", { launch = "obsidian", focus = "obsidian" })
+o.rebind("SUPER + Return", "Herdr App", { launch = "herdr-app", focus = true })
+o.rebind("SUPER + SHIFT + RETURN", "Terminal", o.launch_terminal())
+o.rebind("SUPER + Return", "Herdr App", { launch = "herdr-app", focus = true })
+o.bind("SUPER + A", "Btop", { tui = "btop", focus = true })
+o.bind("SUPER + D", "DBUI", { tui = "nvim -c DBUI", focus = true })
+o.bind("SUPER + SHIFT + D", "Todoist", { webapp = "https://app.todoist.com", focus = "todoist" })
+o.rebind("SUPER + SHIFT + B", "Default bindings", "omarchy-launch-tui nvim /usr/share/omarchy/default/hypr/bindings")
+o.rebind("SUPER + SHIFT + W", "Wake external display", "~/config-omarchy/bin/wake-external-monitor.fish")
 
 -- Raise the default browser if a window exists; otherwise launch it.
 local focus_browser = [[
