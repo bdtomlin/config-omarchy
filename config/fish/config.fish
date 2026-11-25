@@ -14,7 +14,9 @@ if status is-interactive
   alias q exit
   alias :q exit
   alias yy yazi
+  alias ls exa
   alias docker podman
+  alias agent cursor-agent
   alias watts "awk '{print \$1*10^-6 \"W\"}' /sys/class/power_supply/BAT0/power_now"
 
   set -x BAT_THEME 1337

@@ -139,6 +139,4 @@ hl.on("window.destroy", console_recount)
 hl.on("window.move_to_workspace", console_recount)
 hl.on("window.update_rules", console_recount)
 
-hl.env("GRIDCRAFT_WAYLAND", "1")
-hl.env("DECKCRAFT_WAYLAND", "1")
-hl.env("WORDCRAFT_WAYLAND", "1")
+o.window("^herdr-app$", { tag = "+terminal" })

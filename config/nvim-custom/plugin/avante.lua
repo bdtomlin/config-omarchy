@@ -1,29 +1,29 @@
-vim.pack.add({
-  "https://github.com/yetone/avante.nvim.git",
-  "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/MunifTanjim/nui.nvim",
-  "https://github.com/nvim-tree/nvim-web-devicons",
-  {
-    src = "https://github.com/MeanderingProgrammer/render-markdown.nvim",
-    config = function()
-      require("render-markdown").setup({
-        file_types = { "markdown", "Avante" },
-      })
-    end,
-  },
-})
-require("avante").setup({
-  provider = "cursor",
-  mode = "agentic",
-  acp_providers = {
-    cursor = {
-      command = os.getenv("HOME") .. "/.local/bin/agent",
-      args = { "acp" },
-      auth_method = "cursor_login",
-      env = {
-        HOME = os.getenv("HOME"),
-        PATH = os.getenv("PATH"),
-      },
-    },
-  },
-})
+-- vim.pack.add({
+--   "https://github.com/yetone/avante.nvim.git",
+--   "https://github.com/nvim-lua/plenary.nvim",
+--   "https://github.com/MunifTanjim/nui.nvim",
+--   "https://github.com/nvim-tree/nvim-web-devicons",
+--   {
+--     src = "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+--     config = function()
+--       require("render-markdown").setup({
+--         file_types = { "markdown", "Avante" },
+--       })
+--     end,
+--   },
+-- })
+-- require("avante").setup({
+--   provider = "cursor",
+--   mode = "agentic",
+--   acp_providers = {
+--     cursor = {
+--       command = os.getenv("HOME") .. "/.local/bin/agent",
+--       args = { "acp" },
+--       auth_method = "cursor_login",
+--       env = {
+--         HOME = os.getenv("HOME"),
+--         PATH = os.getenv("PATH"),
+--       },
+--     },
+--   },
+-- })

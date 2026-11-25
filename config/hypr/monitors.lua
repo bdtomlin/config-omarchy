@@ -39,8 +39,10 @@
 -- Kept from your earlier monitors.lua, which is saved as monitors.lua.bak.1795117804.
 -- Laptop on the left, MSI on the right. The laptop's top half lines up
 -- with the bottom third of the external monitor.
-hl.monitor({ output = "eDP-1", mode = "2560x1600@165.02", position = "0x1154", scale = 1.6, transform = 0 })
-hl.monitor({ output = "DP-2", mode = "3840x2160@120.00", position = "1600x0", scale = 1.25, transform = 0 })
+hl.monitor({ output = "eDP-1", mode = "2560x1600@165.02", position = "0x1451", scale = 1.25, transform = 0 })
+hl.monitor({ output = "DP-2", mode = "3840x2160@160.00", position = "2048x0", scale = 1, transform = 0 })
 
 local omarchy_gdk_scale = 1
 hl.env("GDK_SCALE", tostring(omarchy_gdk_scale))
+
+-- hyprctl eval 'hl.monitor({ output = "DP-2", mode = "3840x2160@160.00", position = "2048x0", scale = 1, transform = 0 })'
